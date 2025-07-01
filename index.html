@@ -85,7 +85,7 @@
         <h1 class="text-3xl md:text-4xl font-bold text-teal-800 mb-2">
           বাগেরহাট বহুমুখী কলেজিয়েট স্কুলের ১৪৭ তম প্রতিষ্ঠা বার্ষিকী
         </h1>
-        <p class="text-lg text-gray-600">রেজিস্ট্রেশন ফরম</p>
+        <p class="text-lg text-gray-1000">রেজিস্ট্রেশন ফরম</p>
       </header>
 
       <main>
@@ -135,19 +135,6 @@
             ফর্ম পূরণ করুন
           </h2>
           <form id="regForm" class="space-y-6">
-            <div>
-              <label class="form-label" for="email"
-                >ইমেল <span class="required-star">*</span></label
-              >
-              <input
-                class="form-input"
-                id="email"
-                type="email"
-                placeholder="your.email@example.com"
-                required
-              />
-            </div>
-
             <div class="grid md:grid-cols-2 gap-6">
               <div>
                 <label class="form-label" for="name"
@@ -159,6 +146,27 @@
                   type="text"
                   placeholder="আপনার সম্পূর্ণ নাম"
                   required
+                />
+              </div>
+              <div>
+                <label class="form-label" for="fatherName">পিতার নামঃ</label>
+                <input
+                  class="form-input"
+                  id="fatherName"
+                  type="text"
+                  placeholder="আপনার পিতার নাম"
+                />
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label" for="motherName">মাতার নামঃ</label>
+                <input
+                  class="form-input"
+                  id="motherName"
+                  type="text"
+                  placeholder="আপনার মাতার নাম"
                 />
               </div>
               <div>
@@ -175,34 +183,16 @@
               </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="form-label" for="fatherName">পিতার নামঃ</label>
-                <input
-                  class="form-input"
-                  id="fatherName"
-                  type="text"
-                  placeholder="আপনার পিতার নাম"
-                />
-              </div>
-              <div>
-                <label class="form-label" for="motherName">মাতার নামঃ</label>
-                <input
-                  class="form-input"
-                  id="motherName"
-                  type="text"
-                  placeholder="আপনার মাতার নাম"
-                />
-              </div>
-            </div>
-
             <div>
-              <label class="form-label" for="address">ঠিকানাঃ</label>
+              <label class="form-label" for="email"
+                >ইমেল <span class="required-star">*</span></label
+              >
               <input
                 class="form-input"
-                id="address"
-                type="text"
-                placeholder="আপনার বর্তমান ঠিকানা"
+                id="email"
+                type="email"
+                placeholder="your.email@example.com"
+                required
               />
             </div>
 
@@ -217,15 +207,12 @@
                 />
               </div>
               <div>
-                <label class="form-label" for="academicYear"
-                  >শিক্ষাবর্ষঃ <span class="required-star">*</span></label
-                >
+                <label class="form-label" for="address">ঠিকানাঃ</label>
                 <input
                   class="form-input"
-                  id="academicYear"
+                  id="address"
                   type="text"
-                  placeholder="উদাহরণ: 2015-2017"
-                  required
+                  placeholder="আপনার বর্তমান ঠিকানা"
                 />
               </div>
             </div>
@@ -265,6 +252,9 @@
                 </label>
               </div>
             </div>
+
+            <div id="academic-info-fields" class="hidden grid md:grid-cols-2 gap-6 p-4 bg-teal-50 rounded-lg">
+                </div>
 
             <div id="guest-info" class="hidden space-y-4 p-4 bg-teal-50 rounded-lg">
               <p class="font-semibold text-teal-800">অতিথি পরিচিতিঃ</p>
@@ -353,7 +343,7 @@
                     required
                   />
                   <span class="form-radio-label"
-                    >অনলাইন (বিকাশ/নগদ/রকেট)-01309114757</span
+                    >অনলাইন (বিকাশ/নগদ)-01931643243</span
                   >
                 </label>
                 <label class="flex items-center">
@@ -382,7 +372,6 @@
                   <option value="" disabled selected>নির্বাচন করুন</option>
                   <option value="বিকাশ">বিকাশ</option>
                   <option value="নগদ">নগদ</option>
-                  <option value="রকেট">রকেট</option>
                 </select>
               </div>
               <div>
@@ -448,7 +437,7 @@
             id="success-message"
             class="hidden mt-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center"
           >
-            আপনার রেজিস্ট্রেশন সফলভাবে জমা দেওয়া হয়েছে। ধন্যবাদ!
+            আপনার আবেদন জমা দেওয়া হয়েছে, নিবন্ধনের তথ্য আপনাকে জানানো হবে । ধন্যবাদ!
           </div>
         </section>
       </main>
@@ -458,10 +447,10 @@
           &copy; ২০২৫ বাগেরহাট বহুমুখী কলেজিয়েট স্কুল। সর্বস্বত্ব সংরক্ষিত।
         </p>
         <p class="text-sm text-gray-500 mt-1">
-          যোগাযোগ: Mustak Ahamed - 01711652559
+          যোগাযোগ: মোস্তাক আহমেদ (প্রভাষক) - ০১৭১১৬৫২৫৫৯
         </p>
         <p class="text-sm text-gray-500 mt-1">
-          Developed BY: Alamin Howlader (Batch-2012)
+          Developed BY: Alamin Howlader (Batch-2012)-  01994190889
         </p>
       </footer>
     </div>
@@ -471,7 +460,7 @@
         // REPLACE THIS WITH YOUR DEPLOYED GOOGLE APPS SCRIPT WEB APP URL
         // Example: const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz_YOUR_UNIQUE_ID_HERE/exec';
         const GOOGLE_APPS_SCRIPT_URL =
-          "https://script.google.com/macros/s/AKfycbw1mq1Fg4Hzr1gg0sezjNNmnrJez2zmaaabpzQO5ZAcVltWLa8QW0BM2hrLPAVujGIx/exec"; // *** IMPORTANT: REPLACE THIS URL ***
+          "https://script.google.com/macros/s/AKfycbyY5a1MJsCBmz-hPo46nguEtwBL1am8UphSIgFlj4FuG5m6u_5YB-hITmuHrXX6yg0/exec"; // *** IMPORTANT: REPLACE THIS URL ***
 
         const registrationTypeRadios = document.querySelectorAll(
           'input[name="registrationType"]'
@@ -480,6 +469,7 @@
           'input[name="paymentMethod"]'
         );
         const registrationFeeInput = document.getElementById("registrationFee");
+        const academicInfoDiv = document.getElementById("academic-info-fields");
         const guestInfoDiv = document.getElementById("guest-info");
         const onlinePaymentFields = document.getElementById(
           "online-payment-fields"
@@ -494,17 +484,16 @@
         const receiverNameInput = document.getElementById("receiverName");
         const receiverNumberInput = document.getElementById("receiverNumber");
 
-        const fees = {
-          online: {
-            current: { amount: 205, charge: 5 },
-            alumni: { amount: 510, charge: 10 },
-            guest: { amount: 510, charge: 10 },
-          },
-          cash: {
-            current: { amount: 200, charge: 0 },
-            alumni: { amount: 500, charge: 0 },
-            guest: { amount: 500, charge: 0 },
-          },
+        const onlineFees = {
+          current: { amount: 205, charge: 5 },
+          alumni: { amount: 510, charge: 10 },
+          guest: { amount: 510, charge: 10 },
+        };
+        
+        const cashFees = {
+          current: { amount: 200 },
+          alumni: { amount: 500 },
+          guest: { amount: 500 },
         };
 
         // Function to update registration fee based on registration type and payment method
@@ -517,41 +506,96 @@
           );
 
           if (selectedType && selectedPaymentMethod) {
-            const feeInfo = fees[selectedPaymentMethod.value][selectedType.value];
-            if (feeInfo) {
-              registrationFeeInput.value = feeInfo.amount;
-              if (feeInfo.charge > 0) {
+            if (selectedPaymentMethod.value === "online") {
+              const feeInfo = onlineFees[selectedType.value];
+              if (feeInfo) {
+                registrationFeeInput.value = feeInfo.amount;
                 transactionRemarks.textContent = `${feeInfo.charge} টাকা লেনদেন চার্জ অন্তর্ভুক্ত।`;
                 transactionRemarks.classList.remove("hidden");
-              } else {
+              }
+            } else if (selectedPaymentMethod.value === "cash") {
+              const feeInfo = cashFees[selectedType.value];
+              if (feeInfo) {
+                registrationFeeInput.value = feeInfo.amount;
                 transactionRemarks.classList.add("hidden");
               }
-            } else {
-              registrationFeeInput.value = "";
-              transactionRemarks.classList.add("hidden");
             }
           } else {
             registrationFeeInput.value = "";
             transactionRemarks.classList.add("hidden");
           }
         }
+        
+        // Function to update academic fields based on registration type
+        function updateAcademicFields() {
+            const selectedType = document.querySelector('input[name="registrationType"]:checked');
+            academicInfoDiv.innerHTML = ''; // Clear previous content
+            academicInfoDiv.classList.add('hidden');
+            guestInfoDiv.classList.add('hidden');
+            
+            // Remove required attributes from all potential academic fields
+            const classInput = document.getElementById('class');
+            const rollInput = document.getElementById('roll');
+            const academicYearInput = document.getElementById('academicYear');
+            
+            if (classInput) classInput.removeAttribute('required');
+            if (rollInput) rollInput.removeAttribute('required');
+            if (academicYearInput) academicYearInput.removeAttribute('required');
+
+            if (selectedType) {
+                const type = selectedType.value;
+                if (type === 'current') {
+                    academicInfoDiv.classList.remove('hidden');
+                    academicInfoDiv.innerHTML = `
+                        <div>
+                            <label class="form-label" for="class">শ্রেণি: <span class="required-star">*</span></label>
+                            <select id="class" name="class" class="form-select" required>
+                                <option value="" disabled selected>নির্বাচন করুন</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="form-label" for="roll">রোল: <span class="required-star">*</span></label>
+                            <input class="form-input" id="roll" type="text" placeholder="আপনার রোল" required />
+                        </div>
+                    `;
+                } else if (type === 'alumni') {
+                    academicInfoDiv.classList.remove('hidden');
+                    academicInfoDiv.innerHTML = `
+                        <div class="col-span-2">
+                            <label class="form-label" for="academicYear">শিক্ষাবর্ষঃ <span class="required-star">*</span></label>
+                            <input class="form-input" id="academicYear" type="text" placeholder="উদাহরণ: 2012" required />
+                        </div>
+                    `;
+                } else if (type === 'guest') {
+                    guestInfoDiv.classList.remove('hidden');
+                }
+            }
+        }
 
         // Event listener for registration type change
         registrationTypeRadios.forEach((radio) => {
           radio.addEventListener("change", function () {
             updateFee();
-            if (this.value === "guest") {
-              guestInfoDiv.classList.remove("hidden");
-            } else {
-              guestInfoDiv.classList.add("hidden");
-            }
+            updateAcademicFields();
           });
         });
 
         // Event listener for payment method change
         paymentMethodRadios.forEach((radio) => {
           radio.addEventListener("change", function () {
-            updateFee(); // Call updateFee here to reflect changes immediately
+            updateFee(); // Update fee whenever the payment method changes
             if (this.value === "online") {
               onlinePaymentFields.classList.remove("hidden");
               cashPaymentFields.classList.add("hidden");
@@ -579,6 +623,12 @@
             }
           });
         });
+        
+        // Helper function to get value of an element if it exists
+        function getElementValue(id) {
+          const element = document.getElementById(id);
+          return element ? element.value : "N/A";
+        }
 
         const regForm = document.getElementById("regForm");
         const successMessage = document.getElementById("success-message");
@@ -591,34 +641,30 @@
           }
 
           const formData = {
-            email: document.getElementById("email").value,
-            name: document.getElementById("name").value,
-            fatherName: document.getElementById("fatherName").value,
-            motherName: document.getElementById("motherName").value,
-            address: document.getElementById("address").value,
-            profession: document.getElementById("profession").value,
-            mobile: document.getElementById("mobile").value,
-            academicYear: document.getElementById("academicYear").value,
-            registrationType: document.querySelector(
-              'input[name="registrationType"]:checked'
-            ).value,
-            guestStudentName: document.getElementById("guestStudentName").value,
-            guestAcademicYear: document.getElementById("guestAcademicYear").value,
-            tshirtSize: document.getElementById("tshirtSize").value,
-            registrationFee: document.getElementById("registrationFee").value,
-            donation: document.getElementById("donation").value,
-            paymentMethod: document.querySelector(
-              'input[name="paymentMethod"]:checked'
-            ).value,
+            email: getElementValue("email"),
+            name: getElementValue("name"),
+            fatherName: getElementValue("fatherName"),
+            motherName: getElementValue("motherName"),
+            address: getElementValue("address"),
+            profession: getElementValue("profession"),
+            mobile: getElementValue("mobile"),
+            // Conditionally add academic info
+            class: getElementValue("class"),
+            roll: getElementValue("roll"),
+            academicYear: getElementValue("academicYear"),
+            registrationType: document.querySelector('input[name="registrationType"]:checked').value,
+            guestStudentName: getElementValue("guestStudentName"),
+            guestAcademicYear: getElementValue("guestAcademicYear"),
+            tshirtSize: getElementValue("tshirtSize"),
+            registrationFee: getElementValue("registrationFee"),
+            donation: getElementValue("donation"),
+            paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value,
             // Conditional fields based on payment method
-            onlinePaymentMethod:
-              document.getElementById("onlinePaymentMethod").value || "N/A", // Add this line
-            paymentAccount:
-              document.getElementById("paymentAccount").value || "N/A",
-            transactionId: document.getElementById("transactionId").value || "N/A",
-            receiverName: document.getElementById("receiverName").value || "N/A",
-            receiverNumber:
-              document.getElementById("receiverNumber").value || "N/A",
+            onlinePaymentMethod: getElementValue("onlinePaymentMethod"),
+            paymentAccount: getElementValue("paymentAccount"),
+            transactionId: getElementValue("transactionId"),
+            receiverName: getElementValue("receiverName"),
+            receiverNumber: getElementValue("receiverNumber"),
           };
 
           try {
@@ -631,11 +677,8 @@
               body: JSON.stringify(formData),
             });
 
-            // Even with 'no-cors', we might not get a readable response from Apps Script,
-            // but the request will be sent.
-            // For actual response handling, Apps Script needs to return specific CORS headers.
-            // Assuming the request reached Apps Script successfully.
-
+            // With 'no-cors', the response status will be 0 and response.ok will be false.
+            // We assume success if the fetch operation completes without a network error.
             regForm.classList.add("hidden");
             successMessage.classList.remove("hidden");
             window.scrollTo(0, document.body.scrollHeight);
@@ -673,7 +716,10 @@
 
         setInterval(updateCountdown, 1000);
         updateCountdown();
-        updateFee(); // Initialize fee display on page load
+        
+        // Initial fee and academic field updates on page load
+        updateFee();
+        updateAcademicFields();
       });
     </script>
   </body>
